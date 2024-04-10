@@ -1,0 +1,24 @@
+/*
+Element {
+    atribute: value;
+    atribute: value;
+    atribute: value;
+    atribute: value;
+    atribute: value;
+    atribute: value;
+    ....
+}
+*/
+.div1{
+    width: 20px;
+    height: 15px;
+    padding-left: 10px;
+    padding-right: 20px;
+    margin: 20px;
+}
+.div2 {padding-left: 20px;
+padding-right: 20px; margin: 10px;}
+
+.button-30 {position: relative;
+    margin-top: 20px;
+    right: 200px;color:blueviolet }
