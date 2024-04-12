@@ -1,0 +1,51 @@
+/*
+Element {
+    atribute: value;
+    atribute: value;
+    atribute: value;
+    atribute: value;
+    atribute: value;
+    atribute: value;
+    ....
+}
+*/
+
+
+.button-30 {position:relative;
+    bottom: 20px;
+    right: 300px;
+    color:rgb(26, 4, 153) }
+
+    .color {color:rgb(187, 38, 38);
+font-size: 20px; margin-top: 20px;margin-bottom: 20px;}
+
+.div1 {height: 30px; 
+    width: 30px;
+    padding: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+margin-bottom:20px ;}
+
+
+
+
+.div2 { height: 20px;
+        width: 200px;
+    padding-left:  10px; 
+padding-right: 10px;
+margin: 20px;}
+
+.div3 {height: 20px;
+    width: 200px;
+padding-left:  10px; 
+padding-right: 10px;
+margin:  20px;
+              
+}
+
+
+
+
+
+
+
