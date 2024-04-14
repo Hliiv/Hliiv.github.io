@@ -1,0 +1,45 @@
+
+
+
+
+.container {
+  display: flex;
+}
+
+.image-container {
+  position: relative;
+  margin: 10px;
+}
+
+.image-container img {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+}
+
+.overlay {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.overlay h2,
+.overlay button {
+  color: rgb(226, 30, 151);
+}
+
+.overlay button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.overlay button:hover {
+  background-color: #0056b3;
+}
+
