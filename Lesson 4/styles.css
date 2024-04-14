@@ -1,264 +1,249 @@
-coloredDiv {
+.container {
+    display: flex;
     background-color: grey;
 }
 
-/* > nesting elemendid */
-.coloredDiv > div {
-    background-color: aquamarine;
-    font-size: 21px;
-    padding: 5px;
+/*
+    2n - paaris
+    2n + 1 - paaritu
+    2n - 
+        0 - 0
+        1 - 2
+        2 - 4
+        3 - 6
+        4 - 8
+        5 - 10
+        6 - 12
+        7 - 14
+*/
+.container > div, .custom {
+    background-color: brown;
+    font-size: 30px;
     margin: 5px;
 }
-
-.flexDiv {
-    display: flex;
-}
-
-.flexWrap {
+contwrap {
     flex-wrap: wrap;
 }
 
-.flexColumn {
+.contdir {
     flex-direction: column;
-    /*flex-direction: column-reverse;
-    flex-direction: row-reverse;*/
 }
 
-.flexJustify {
-    /* liigutamine vasakule ja paremale */
-    /*justify-content: start;
-    justify-content: end;
-    justify-content: space-around;
-    justify-content: space-between;
-    justify-content: space-evenly;*/
+.contdir3 {
+    flex-direction: row-reverse;
+}
+
+.contdir4 {
+    flex-direction: column-reverse;
+}
+
+.contjust {
     justify-content: center;
 }
 
-.flexAlign {
-    /* liigutamine alla ja ülesse */
+.contjust2 {
+    justify-content: space-around;
+}
+
+.contjust3 {
+    justify-content: space-between;
+}
+
+.contjust4 {
+    justify-content: space-evenly;
+}
+
+.contjust5 {
+    justify-content: start;
+}
+
+.contjust6 {
+    justify-content: end;
+}
+
+.contcent1 {
     height: 200px;
-    /*align-items: start;
-    align-items: end;
-    align-items: stretch;*/
     align-items: center;
 }
 
-.flexAlign2 {
+.contcent2 {
     height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+.contcent3 {
+    height: 200px;
+    align-items: start;
+}
+
+.contcent4 {
+    height: 200px;
+    align-items: end;
+}
+
+.mobile {
+    display: none;
+}
+
+.contgrow > div:nth-child(1) {
+    flex-grow: 1;
+}
+
+.contgrow > div:nth-child(2) {
+    flex-grow: 2;
+}
+
+.contgrow > div:nth-child(3) {
+    flex-grow: 3;
+}
+
+.contgrow > div:nth-child(4) {
+    flex-grow: 1;
+}
+
+.contgrow > div:nth-child(5) {
+    flex-grow: 1;
+}
+
+.contbasis {
     flex-wrap: wrap;
-    /*align-content: space-around;
-    align-content: space-between;
-    align-content: start;
-    align-content: end;*/
-    align-content: center;
 }
 
-.flexChild > div {
-    flex-basis: 50px;
-}
-
-.flexChild > div:nth-child(3) {
+.contbasis > div:nth-child(1) {
     flex-basis: 200px;
 }
 
-/*
-    Paaris - 2 4 6 -> 2n / even
-    Paaritu - 3 7 9 -> 2n + 1 / odd
-*/
-/*
-            -1 0 1 2 3 4
-    n       -1 0 1 2 3 4
-    n+1     0  1 2 3 4 5
-    2n      -2 0 2 4 6 8
-    2n+1    -1 1 3 5 7 9
-
-*/
-.flexChild2 > div:nth-child(2n + 1) {
-    background-color: brown;
+.contself {
+    height: 200px;
 }
 
-.flexMedia {
-    justify-content: center;
+.contself > div:nth-child(3) {
+    align-self: end;
 }
 
-/* Media Query */
-@media (max-width: 500px) {
-    .flexMedia {
-        flex-direction: column;
-    }
+.contself > div:nth-child(1) {
+    align-self: start;
 }
 
-@media (max-width: 600px) {
-    .flexMedia {
-        background-color: brown;
-    }
-}
-
-@media (min-width: 500px) and (max-width: 600px) {
-    .flexMedia > div {
-        background-color: green;
-    }
-}
-
-@media (min-width: 800px) and (max-width: 1000px) {
-    .flexMedia > div {
-        background-color: rgb(138, 118, 19);
-    }
-}
-
-@media (min-width: 1100px) {
-    .flexMedia > div {
-        background-color: rgb(36, 14, 204);
-    }
-}
-
-.gridDiv {
-    display: grid;
-}
-
-.gridAutoCol {
-    grid-template-columns: auto auto auto ;
-}
-
-.gridFixCol {
-    grid-template-columns: auto 100px auto auto;
-}
-
-.gridFixRow {
-    grid-template-rows: auto 400px auto;
-    height: 700px;
-}
-
-.gridJustify {
-    justify-content: start;
-    justify-content: end;
-    justify-content: space-around;
-    justify-content: space-between;
-    justify-content: space-evenly;
-    justify-content: center;
-}
-
-.gridAlign {
-    align-content: start;
-    align-content: end;
-    align-content: space-around;
-    align-content: space-between;
-    align-content: space-evenly;
-    align-content: center;
-    height: 500px;
-}
-
-.homeFlex {
+.mainCont {
     display: flex;
     flex-wrap: wrap;
 }
 
-.homeFlexHeader {
+.header {
     width: 100%;
+    background-image: url('./space1.avif');
+    height: 150px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.homeFlexSide {
+.header > h2 {
+    color: #ffffff;
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    /*
+        1. Nimi - Red/Blue/Gree/Yellow/....
+        2. RGB - RedGreenBlue (R, G, B)
+            0 -> 255
+        2.1 RGBA - RedGreenBlueAlpha (R, G, B, A)
+        3. HEX 000000
+
+        0/1
+
+        0000 = 0
+        0001 = 1
+        0010 = 2
+        0011 = 3
+        0100 = 4
+        0101 = 5
+        0110 = 6
+        0111 = 7
+        1000 = 8
+        1001 = 9
+        1010 = 10
+        0000000010110101 = a
+        ....
+
+        1 + 1 = 2
+        1 + 1 = 1
+        1 + 1 = 11
+
+    */
+}
+
+.menu {
     width: 20%;
 }
 
-.homeFlexCont {
-    width: 73.5%;
-    height: 500px;
+.content {
+    width: 80%;
 }
 
-.homeFlexFooter {
+.footer {
     width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.homeGrid {
-    display: grid;
-    grid-template-rows: auto 500px auto;
-    grid-template-columns: 20% auto;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 300px) {
+    .contord > div:nth-child(1) {
+        order: 2;
+    }
+    
+    .contord > div:nth-child(2) {
+        order: 1;
+    }
+    
+    .contord > div:nth-child(3) {
+        order: 5;
+    }
+    
+    .contord > div:nth-child(4) {
+        order: 4;
+    }
+    
+    .contord > div:nth-child(5) {
+        order: 3;
+    }
 }
 
-.homeGridHeader, .homeGridFooter {
-    grid-column: 1 / 3;
-}
+@media screen and (max-width: 300px) {
+    .mobile {
+        display: block;
+    }
 
-.homeGrid2 {
-    display: grid;
-    grid-template-columns: 20% auto;
-    grid-template-areas: 
-    'header header'
-    'side cont'
-    'footer footer';
-}
+    .desktop {
+        display: none;
+    }
 
-.homeGridHeader2 {
-    grid-area: header;
-}
-
-.homeGridSide2 {
-    grid-area: side;
-}
-
-.homeGridCont2 {
-    grid-area: cont;
-    height: 500px;
-}
-
-.homeGridFooter2 {
-    grid-area: footer;
-}
-
-@media (max-width: 600px) {
-    .homeFlex {
+    .mainCont {
         flex-direction: column;
     }
 
-    .homeFlexHeader, .homeFlexSide, .homeFlexCont, .homeFlexFooter {
-        width: 96%;
+    .menu, .content {
+        width: 100%;
     }
-
-    .homeGrid {
-        grid-template-columns: auto;
-        grid-template-rows: auto auto 500px auto;
-    }
-
-    .homeGridHeader, .homeGridFooter {
-        grid-column: 1 / 2;
-    }
-
-    .homeGrid2 {
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-areas: 'header'
-        'side'
-        'cont'
-        'footer';
-    }
-}
-
-.extraGrid {
-    display: grid;
-    grid-template-columns: auto auto auto auto auto auto auto;
-    grid-template-rows: auto auto auto auto auto;
-}
-
-.extraGrid > div:nth-child(1) {
-    grid-column: 1 / 8;
-}
-
-.extraGrid > div:nth-child(6),
-.extraGrid > div:nth-child(14) {
-    grid-column: 5 / 7;
-}
-
-.extraGrid > div:nth-child(8),
-.extraGrid > div:nth-child(13) {
-    grid-column: 1 / 4;
-}
-
-.extraGrid > div:nth-child(9) {
-    grid-column: 4 / 5;
-    grid-row: 3 / 6;
-}
-.extraGrid > div:nth-child(13),
-.extraGrid > div:nth-child(14) {
-    grid-row: 4 / 6;
 }

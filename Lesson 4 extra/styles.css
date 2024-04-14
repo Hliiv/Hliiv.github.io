@@ -1,93 +1,163 @@
-.homeGrid2 {
+.container {
     display: grid;
-    grid-template-columns: auto;
-    grid-template-areas: 'header'
-    grid-template-areas: 
-    'header'
-    'side'
-    'cont'
-    'footer';
+    grid-template-columns: auto 50px auto auto;
+    grid-template-rows: 100px 50px;
+    gap: 5px;
+    background-color: grey;
+}
 
-@@ -237,7 +238,7 @@
+.container > div, .custom, .extraGrid, .extraFlex {
+    background-color: brown;
+    font-size: 30px;
+}
+
+.contjust {
+    justify-content: center;
+}
+
+.contjust1 {
+    justify-content: start;
+}
+
+.contjust2 {
+    justify-content: end;
+}
+
+.contjust3 {
+    justify-content: space-around;
+}
+
+.contjust4 {
+    justify-content: space-between;
+}
+
+.contjust5 {
+    justify-content: space-evenly;
+}
+
+.contalign {
+    align-items: center;
+}
+
+.contalign2 {
+    align-items: center;
+    justify-content: center;
+}
+
 .extraGrid {
-display: grid;
-grid-template-columns: auto auto auto auto auto auto auto;
-grid-template-rows: auto auto auto auto auto;
-grid-template-rows: auto auto auto auto auto
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto;
+}
+
+.extraGrid > div  {
+    border: 1px black solid;
 }
 
 .extraGrid > div:nth-child(1) {
-
-@@ -258,7 +259,72 @@
-grid-column: 4 / 5;
-grid-row: 3 / 6;
+    grid-column: 1 / 4;
 }
 
-.extraGrid > div:nth-child(13),
-.extraGrid > div:nth-child(14) {
-grid-row: 4 / 6;
+.extraGrid > div:nth-child(2) {
+    grid-column: 4 / 5;
 }
 
-.bigFlex {
-display: flex;
-flex-direction: column;
+.extraGrid > div:nth-child(3) {
+    grid-column: 5 / 7;
 }
 
-.bigFlexSecond,
-.bigFlexThird {
-display: flex;
-background-color: rgb(8, 121, 84) !important;
-margin-left: 0px !important;
-margin-right: 0px !important;
-padding-right: 0px !important;
-padding-left: 0px !important;
+.extraGrid > div:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
 }
 
-.bigFlexSecond > div,
-.bigFlexThird > div {
-flex-grow: 1;
+.extraGrid > div:nth-child(5) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
 }
 
-.bigFlexThird > div:nth-child(1) {
-flex-grow: 10;
+.extraGrid > div:nth-child(6) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
 }
 
-.bigFlexThird > div:nth-child(2) {
-flex-grow: 2;
+.extraGrid > div:nth-child(7) {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
 }
 
-.bigFlexThird > div:nth-child(3) {
-flex-grow: 1;
+.extraGrid > div:nth-child(8) {
+    grid-column: 3 / 7;
+    grid-row: 2 / 4;
 }
 
-.bigFlexSecond > div:nth-child(5) {
-flex-grow: 2.6;
+.extraGrid > div:nth-child(9) {
+    grid-column: 1 / 5;
+    grid-row: 4 / 6;
 }
 
-.bigFlexThird {
-display: flex;
-background-color: rgb(17, 50, 39) !important;
+.extraGrid > div:nth-child(10) {
+    grid-column: 5 / 7;
+    grid-row: 4 / 5;
 }
 
-.bigFlexThirdSub1 {
-display: flex;
-flex-grow: 3;
-background-color: rgb(56, 86, 76) !important;
-flex-wrap: wrap;
+.extraGrid > div:nth-child(11) {
+    grid-column: 5 / 6;
+    grid-row: 5 / 6;
 }
 
-.bigFlexThirdSub1 > div:nth-child(1),
-.bigFlexThirdSub1 > div:nth-child(2) {
-width: 35%;
+.extraGrid > div:nth-child(12) {
+    grid-column: 6 / 7;
+    grid-row: 5 / 6;
 }
 
-.bigFlexThirdSub1 > div:nth-child(3) {
-flex-grow: 1;
+.extraGrid > div:nth-child(13) {
+    grid-column: 1 / 7;
+    grid-row: 6 / 7;
 }
 
-.bigFlexThirdSub2 {
-display: flex;
-flex-direction: column;
-background-color: rgb(35, 38, 37) !important;
-flex-grow: 1;
+.extraFlex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flexRow {
+    width: 100%;
+    display: flex;
+}
+
+.subRow4 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 32%;
+}
+
+.subRow4 > div {
+    width: 50%;
+}
+
+.subRow3 {
+    display: flex;
+    flex-wrap: wrap;
+    width: 32%;
+}
+
+.subRow8, .subrow9 {
+    width: 100%;
+}
+
+.subRow3 > div:nth-child(1) {
+    width: 100%;
+}
+
+.subRow3 > div:nth-child(2), .subRow3 > div:nth-child(2) {
+    width: 50%;
+}
+
+.extraFlex, .flexRow, .subRow4, .subRow8, .subRow9, .subRow3 {
+    border: 1px black solid;
+}
+
+.fleeex {
+    display: flex;
+    flex-wrap: wrap;
 }
