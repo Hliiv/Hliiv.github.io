@@ -44,8 +44,11 @@ let carsObj = [
 console.log (carsObj);
 
 for (let i = 0; i < carsObj.length; i++) {
-  if (carsObj[i].isBought) {
-    console.log(`Car ${i + 1}: Brand: ${carsObj[i].brand}, Color: ${carsObj[i].color}, Year: ${carsObj[i].year}, Price: $${carsObj[i].price}`);
+  if (!carsObj[i].isBought) {
+    console.log("Brand:", carsObj[i].brand);
+    console.log("Color:", carsObj[i].color);
+    console.log("Year:", carsObj[i].year);
+    console.log("Price:", carsObj[i].price);
+    console.log("-------------------------");
   }
 }
-
