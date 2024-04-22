@@ -1,8 +1,6 @@
 
 let cars = ["Toyota", "Honda", "Ford", "Chevrolet","BMW" ];
 
-
-
 let carsObj = [
   {
     "brand": "Toyota",
@@ -41,7 +39,7 @@ let carsObj = [
   }
 ];
 
-console.log (carsObj);
+console.log(carsObj);
 
 for (let i = 0; i < carsObj.length; i++) {
   if (!carsObj[i].isBought) {
