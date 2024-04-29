@@ -14,7 +14,7 @@
     width: 330px;
 }
 
-#pastAnswer {
+#previousLives {
     display: flex;
     flex-wrap: wrap;
 }
